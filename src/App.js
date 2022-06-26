@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React,{useEffect,useState} from 'react';
+import './App.scss';
+import axios from 'axios';
+import CardComponent from './components/CardComponent';
+import FirstImage from "./Image/1.png";
+import Secondimage from "./Image/2.jpg"
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Main from './components/Main';
+import GameShow from "./components/GameShow"
+const Array=["FirstImage","Secondimage"];
 function App() {
+  const [ImageName, setImageName] = useState("FirstImage");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path='/' element={<Main/>}>
+          <Route index element={<GameShow/>}></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
