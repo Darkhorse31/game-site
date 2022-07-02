@@ -69,3 +69,27 @@
 
     }
 }
+.btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-variant: small-caps;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: inset 5px 5px 6px 5px rgb(105, 63, 139);
+    transition: all .3s ease-in-out;
+    &:active{
+        transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        box-shadow: none;
+    }
+    
+
+}
+span{
+    margin-inline: 10px;
+    color: #ffffff;
+}

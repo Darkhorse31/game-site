@@ -12,14 +12,14 @@ const CardComponent = (props) => {
       <h4>{data.name}</h4>
 
       <div className="gener">
-        {genres.length < 1
+        {!genres
           ? null
           : genres.map((items, idx) => {
               return <Gener key={idx} gdata={items} />;
             })}
       </div>
       <div className="plateForm">
-        {platforms.length < 1
+        {!platforms 
           ? null
           : platforms.map((items, idx) => {
               return <Plateform pdata={items} key={idx} />;
